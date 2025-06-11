@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Open Tabs</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    #tabList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+    #tabList li {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    #tabList li:hover {
+      background-color: #f5f5f5;
+    }
+    #tabList a {
+      color: #1a73e8;
+      text-decoration: none;
+      word-break: break-all;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    #tabList a:hover {
+      text-decoration: underline;
+    }
+    img {
+      border-radius: 2px;
+    }
+    .button-container {
+      position: sticky;
+      bottom: 0;
+      background: white;
+      padding: 10px 0;
+      border-top: 1px solid #eee;
+      margin-top: 10px;
+      text-align: center;
+    }
+    #copyButton {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+    #copyButton:hover {
+      background-color: #1557b0;
+    }
+    #copyButton:active {
+      background-color: #0d47a1;
+    }
+    #copyButton.copied {
+      background-color: #34a853;
+    }
+  </style>
+</head>
+<body>
+  <h1>Current Window Tabs</h1>
+  <ul id="tabList"></ul>
+  <div class="button-container">
+    <button id="copyButton">Copy All URLs</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
